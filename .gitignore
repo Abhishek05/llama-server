@@ -1,0 +1,19 @@
+# Build directories
+build/
+external/llama.cpp/build/
+
+# Model files (don't commit large GGUF files)
+*.gguf
+~/.illama/models/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
