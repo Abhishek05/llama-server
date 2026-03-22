@@ -1,2 +1,0 @@
-/usr/bin/ar qc libllama_wrapper.a CMakeFiles/llama_wrapper.dir/llama_wrapper.cpp.o
-/usr/bin/ranlib libllama_wrapper.a
