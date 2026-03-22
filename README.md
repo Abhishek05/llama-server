@@ -74,4 +74,25 @@ curl -X POST http://localhost:11434/v1/chat/completions \
 - cpp-httplib
 - nlohmann/json
 - CLI11
-- Catch2
+
+## 🔗 GitHub Actions (Optional)
+
+For automated builds, add `.github/workflows/build.yml`:
+
+```yaml
+name: Build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+    - name: Build
+      run: |
+        mkdir build && cd build
+        cmake .. -DUSE_LLAMA_CPP=ON
+        make -j3
+```
